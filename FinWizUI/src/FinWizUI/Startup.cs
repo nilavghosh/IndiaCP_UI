@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using NSwag.AspNetCore;
 
 namespace FinWizUI
 {
@@ -55,6 +56,16 @@ namespace FinWizUI
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            
+
+            //app.UseSwaggerUi(typeof(Startup).Assembly, new SwaggerUiOwinSettings());
+
+            //var config = new HttpConfiguration();
+            //app.UseWebApi(config);
+
+            //config.MapHttpAttributeRoutes();
+            //config.EnsureInitialized();
         }
     }
 }
