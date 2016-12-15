@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.0",
-    "signature": "44791817169977f3e6a87d983ee7a2eb27a06725"
+    "signature": "70a607d4f2ee816ee35dbe59dd9073ee945ac45e"
   },
   "compilationOptions": {
     "defines": [
@@ -29,7 +29,9 @@
           "Microsoft.Extensions.Logging.Console": "1.0.0",
           "Microsoft.Extensions.Logging.Debug": "1.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
-          "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0"
+          "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
+          "MongoDB.Driver": "2.4.0",
+          "NSwag.AspNetCore": "8.0.0"
         },
         "runtime": {
           "FinWizUI.dll": {}
@@ -967,6 +969,18 @@
           "lib/netstandard1.0/Microsoft.Extensions.FileProviders.Composite.dll": {}
         }
       },
+      "Microsoft.Extensions.FileProviders.Embedded/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.FileProviders.Abstractions": "1.0.0",
+          "System.Runtime.Extensions": "4.1.0"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Microsoft.Extensions.FileProviders.Embedded.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.0/Microsoft.Extensions.FileProviders.Embedded.dll": {}
+        }
+      },
       "Microsoft.Extensions.FileProviders.Physical/1.0.0": {
         "dependencies": {
           "Microsoft.Extensions.FileProviders.Abstractions": "1.0.0",
@@ -1227,6 +1241,52 @@
           "lib/netstandard1.5/Microsoft.VisualStudio.Web.BrowserLink.Loader.dll": {}
         }
       },
+      "MongoDB.Bson/2.4.0": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "System.Collections.NonGeneric": "4.0.1",
+          "System.Diagnostics.Process": "4.1.0",
+          "System.Dynamic.Runtime": "4.0.11",
+          "System.Reflection.Emit.Lightweight": "4.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.5/MongoDB.Bson.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.5/MongoDB.Bson.dll": {}
+        }
+      },
+      "MongoDB.Driver/2.4.0": {
+        "dependencies": {
+          "MongoDB.Bson": "2.4.0",
+          "MongoDB.Driver.Core": "2.4.0",
+          "NETStandard.Library": "1.6.0",
+          "System.Linq.Queryable": "4.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.5/MongoDB.Driver.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.5/MongoDB.Driver.dll": {}
+        }
+      },
+      "MongoDB.Driver.Core/2.4.0": {
+        "dependencies": {
+          "MongoDB.Bson": "2.4.0",
+          "NETStandard.Library": "1.6.0",
+          "System.Collections.Specialized": "4.0.1",
+          "System.Diagnostics.TraceSource": "4.0.0",
+          "System.Net.NameResolution": "4.0.0",
+          "System.Net.Security": "4.0.0",
+          "System.Security.SecureString": "4.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.5/MongoDB.Driver.Core.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.5/MongoDB.Driver.Core.dll": {}
+        }
+      },
       "Newtonsoft.Json/9.0.1": {
         "dependencies": {
           "Microsoft.CSharp": "4.0.1",
@@ -1257,6 +1317,80 @@
         },
         "compile": {
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "NJsonSchema/6.3.6185.19861": {
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.0/NJsonSchema.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.0/NJsonSchema.dll": {}
+        }
+      },
+      "NJsonSchema.CodeGeneration/6.3.6185.19861": {
+        "dependencies": {
+          "NJsonSchema": "6.3.6185.19861",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.0/NJsonSchema.CodeGeneration.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.0/NJsonSchema.CodeGeneration.dll": {}
+        }
+      },
+      "NSwag.Annotations/8.0.6186.17340": {
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.0/NSwag.Annotations.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.0/NSwag.Annotations.dll": {}
+        }
+      },
+      "NSwag.AspNetCore/8.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "1.0.1",
+          "Microsoft.AspNetCore.StaticFiles": "1.0.0",
+          "Microsoft.Extensions.FileProviders.Embedded": "1.0.0",
+          "NSwag.Annotations": "8.0.6186.17340",
+          "NSwag.CodeGeneration": "8.0.6186.17339",
+          "System.IO.FileSystem": "4.0.1",
+          "System.Xml.XPath.XDocument": "4.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.6/NSwag.AspNetCore.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.6/NSwag.AspNetCore.dll": {}
+        }
+      },
+      "NSwag.CodeGeneration/8.0.6186.17339": {
+        "dependencies": {
+          "NJsonSchema.CodeGeneration": "6.3.6185.19861",
+          "NSwag.Core": "8.0.6186.17339"
+        },
+        "runtime": {
+          "lib/netstandard1.0/NSwag.CodeGeneration.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.0/NSwag.CodeGeneration.dll": {}
+        }
+      },
+      "NSwag.Core/8.0.6186.17339": {
+        "dependencies": {
+          "NJsonSchema": "6.3.6185.19861"
+        },
+        "runtime": {
+          "lib/netstandard1.0/NSwag.Core.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.0/NSwag.Core.dll": {}
         }
       },
       "NuGet.Common/3.5.0-beta2-1484": {
@@ -1480,6 +1614,9 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Collections.Specialized.dll": {}
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Collections.Specialized.dll": {}
         }
       },
       "System.ComponentModel.Primitives/4.1.0": {
@@ -1531,6 +1668,32 @@
           "ref/netstandard1.0/System.Diagnostics.Contracts.dll": {}
         }
       },
+      "System.Diagnostics.TraceSource/4.0.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.0.1",
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Globalization": "4.0.11",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Threading": "4.0.11",
+          "runtime.native.System": "4.0.0"
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard1.3/System.Diagnostics.TraceSource.dll": {
+            "rid": "unix",
+            "assetType": "runtime"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Diagnostics.TraceSource.dll": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Diagnostics.TraceSource.dll": {}
+        }
+      },
       "System.Net.WebSockets/4.0.0": {
         "dependencies": {
           "Microsoft.Win32.Primitives": "4.0.1",
@@ -1555,6 +1718,31 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Runtime.Serialization.Primitives.dll": {}
+        }
+      },
+      "System.Security.SecureString/4.0.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.0.1",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Handles": "4.0.1",
+          "System.Runtime.InteropServices": "4.1.0",
+          "System.Security.Cryptography.Primitives": "4.0.0",
+          "System.Text.Encoding": "4.0.11",
+          "System.Threading": "4.0.11"
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard1.3/System.Security.SecureString.dll": {
+            "rid": "unix",
+            "assetType": "runtime"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Security.SecureString.dll": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Security.SecureString.dll": {}
         }
       },
       "System.Text.Encodings.Web/4.0.0": {
@@ -2587,6 +2775,9 @@
           "System.Reflection.Primitives": "4.0.1",
           "System.Runtime": "4.1.0"
         },
+        "compile": {
+          "ref/netstandard1.0/System.Reflection.Emit.ILGeneration.dll": {}
+        },
         "compileOnly": true
       },
       "System.Reflection.Emit.Lightweight/4.0.1": {
@@ -2595,6 +2786,9 @@
           "System.Reflection.Emit.ILGeneration": "4.0.1",
           "System.Reflection.Primitives": "4.0.1",
           "System.Runtime": "4.1.0"
+        },
+        "compile": {
+          "ref/netstandard1.0/System.Reflection.Emit.Lightweight.dll": {}
         },
         "compileOnly": true
       },
@@ -3181,6 +3375,9 @@
           "System.Threading": "4.0.11",
           "System.Xml.ReaderWriter": "4.0.11"
         },
+        "compile": {
+          "ref/netstandard1.3/System.Xml.XPath.dll": {}
+        },
         "compileOnly": true
       },
       "System.Xml.XPath.XDocument/4.0.1": {
@@ -3194,6 +3391,9 @@
           "System.Xml.ReaderWriter": "4.0.11",
           "System.Xml.XDocument": "4.0.11",
           "System.Xml.XPath": "4.0.1"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         },
         "compileOnly": true
       }
@@ -3495,6 +3695,11 @@
       "serviceable": true,
       "sha512": "sha512-4nbDQfagNr1eILXSFZbTNuAKuZ6SsOyK6ySTMryo67ECi8+EcZBQ12E0aXcxX/aT3v+3pbWSt71NXlEm8tKIxw=="
     },
+    "Microsoft.Extensions.FileProviders.Embedded/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mMCI3/BLXAyBCDneqOI4ohETd0IXjbXZdoiCm1dYdnOdV193ByEOCFQ6/Vn9RVdU5UlC4Nn1P4J5Df7pXG/vGg=="
+    },
     "Microsoft.Extensions.FileProviders.Physical/1.0.0": {
       "type": "package",
       "serviceable": true,
@@ -3580,10 +3785,55 @@
       "serviceable": true,
       "sha512": "sha512-f01OAOfsctcN7gSa05qYK8AgU1E/BFeZizvszNJMXY3BMJbYSj+3+YqyLunkMSf7LN92kcl7gQsAY9FayEH3ag=="
     },
+    "MongoDB.Bson/2.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qxDV2pyW6VwTf+YRQ12NarFkkX1tuD4paaNJ4zEeqX52h/n596lpSsaazJOI2Wi69xz8KLBRAeXKVw9q2sIjuQ=="
+    },
+    "MongoDB.Driver/2.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-k4fWKaw3v1ohbRqH7RPovx6KxnzCFv2W8tqnb/e4KL62ciOtUZtwvaGNExVD5HNpUSz+MQF6v/d0s18vnlDJ/w=="
+    },
+    "MongoDB.Driver.Core/2.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sYO15KAnnhaGgJv6wKUPH8A90lfUglnF/s457T9CClK0FogDjO56qI+vGH0bvqRnZvRQoznkPcci6/UYNKgWXA=="
+    },
     "Newtonsoft.Json/9.0.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-U82mHQSKaIk+lpSVCbWYKNavmNH1i5xrExDEquU1i6I5pV6UMOqRnJRSlKO3cMPfcpp0RgDY+8jUXHdQ4IfXvw=="
+    },
+    "NJsonSchema/6.3.6185.19861": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-v0q5HWkIks05dPjMaU/NylBDBspkackv/uPYV0Tp3mytrjrOSI6qiLwIgEA4UNyDyZulaQvPnCj3/i20wpyprg=="
+    },
+    "NJsonSchema.CodeGeneration/6.3.6185.19861": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4qXAEOSAWt+hT0Uf8cc/k18hGmJiGev68nTkkTsIL1S+uaMUxAOIPkoXVEloz9oTLQAqy8OYtCW5ylisNG0Prg=="
+    },
+    "NSwag.Annotations/8.0.6186.17340": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-J1hcuLdaZ9IkIRANJM8UGKpTrBWXZrMtX07f0l4hwgIs+nA/RjyQuor3at1W77g3dBiRGvcFJPVgp7YMnyQMKA=="
+    },
+    "NSwag.AspNetCore/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xtxxpeDc/XPgI7E1AqBB0OcliLUx8/uOTqV2uNWKDFiT3qJ7JuIcxGpzKk8RrPtpJ4jNxrta5YLoWq72OUAg3g=="
+    },
+    "NSwag.CodeGeneration/8.0.6186.17339": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-D6mTodD7EdoqgK6ncbFI8HWy2/VygmmOu/gECyr4n4lZrT1pWV9Qx4WrZuluiJmKLBtIIHgrjmfmY79nDNr0Rw=="
+    },
+    "NSwag.Core/8.0.6186.17339": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-S7iJwaiZQ/ye5zh1ETjlh3msMSp2RXlifqtTI4XhwBKr95R5ENX5KsqQ9SseCu1wZjYXaSATEDLCrvs2ana49A=="
     },
     "NuGet.Common/3.5.0-beta2-1484": {
       "type": "package",
@@ -3680,6 +3930,11 @@
       "serviceable": true,
       "sha512": "sha512-HvQQjy712vnlpPxaloZYkuE78Gn353L0SJLJVeLcNASeg9c4qla2a1Xq8I7B3jZoDzKPtHTkyVO7AZ5tpeQGuA=="
     },
+    "System.Diagnostics.TraceSource/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6WVCczFZKXwpWpzd/iJkYnsmWTSFFiU24Xx/YdHXBcu+nFI/ehTgeqdJQFbtRPzbrO3KtRNjvkhtj4t5/WwWsA=="
+    },
     "System.Net.WebSockets/4.0.0": {
       "type": "package",
       "serviceable": true,
@@ -3689,6 +3944,11 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-HZ6Du5QrTG8MNJbf4e4qMO3JRAkIboGT5Fk804uZtg3Gq516S7hAqTm2UZKUHa7/6HUGdVy3AqMQKbns06G/cg=="
+    },
+    "System.Security.SecureString/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sqzq9GD6/b0yqPuMpgIKBuoLf4VKAj8oAfh4kXSzPaN6eoKY3hRi9C5L27uip25qlU+BGPfb0xh2Rmbwc4jFVA=="
     },
     "System.Text.Encodings.Web/4.0.0": {
       "type": "package",
