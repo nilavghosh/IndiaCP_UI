@@ -1,4 +1,4 @@
-# This is the Swagger(YAML) specification for the IndiaCP API
+# This is the Swagger(YAML) specification for the IndiaCP Api
 swagger: '2.0'
 info:
   title: IndiaCP API
