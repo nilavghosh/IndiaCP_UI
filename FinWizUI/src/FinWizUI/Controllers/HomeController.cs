@@ -8,9 +8,20 @@ namespace FinWizUI.Controllers
 {
     public class HomeController : Controller
     {
+        public IEnumerable<string> Get()
+        {
+            return new string[] { "value1", "value2" };
+        }
+
         public IActionResult Index()
         {
             return View();
+        }
+
+        
+        public IEnumerable<String> GetAll()
+        {
+            return new List<String>();
         }
 
         public IActionResult About()

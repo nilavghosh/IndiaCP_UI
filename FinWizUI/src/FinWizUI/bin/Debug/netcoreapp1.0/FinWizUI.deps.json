@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.0",
-    "signature": "8c1142432b64f0c9145dfe6e30d38ba9b036c106"
+    "signature": "56c6bc2c89ac4eb7003498c0caf0c8c1fc53ac03"
   },
   "compilationOptions": {
     "defines": [
@@ -31,10 +31,10 @@
           "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
           "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
           "MongoDB.Driver": "2.4.0",
-          "NSwag.AspNetCore": "8.0.0",
           "AspNetCore.Identity.MongoDB": "1.0.0-rc2-2",
           "Microsoft.AspNetCore.DataProtection.Extensions": "1.1.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
+          "Swashbuckle": "6.0.0-beta902"
         },
         "runtime": {
           "FinWizUI.dll": {}
@@ -1454,80 +1454,6 @@
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
         }
       },
-      "NJsonSchema/6.3.6185.19861": {
-        "dependencies": {
-          "Newtonsoft.Json": "9.0.1"
-        },
-        "runtime": {
-          "lib/netstandard1.0/NJsonSchema.dll": {}
-        },
-        "compile": {
-          "lib/netstandard1.0/NJsonSchema.dll": {}
-        }
-      },
-      "NJsonSchema.CodeGeneration/6.3.6185.19861": {
-        "dependencies": {
-          "NJsonSchema": "6.3.6185.19861",
-          "Newtonsoft.Json": "9.0.1"
-        },
-        "runtime": {
-          "lib/netstandard1.0/NJsonSchema.CodeGeneration.dll": {}
-        },
-        "compile": {
-          "lib/netstandard1.0/NJsonSchema.CodeGeneration.dll": {}
-        }
-      },
-      "NSwag.Annotations/8.0.6186.17340": {
-        "dependencies": {
-          "Newtonsoft.Json": "9.0.1"
-        },
-        "runtime": {
-          "lib/netstandard1.0/NSwag.Annotations.dll": {}
-        },
-        "compile": {
-          "lib/netstandard1.0/NSwag.Annotations.dll": {}
-        }
-      },
-      "NSwag.AspNetCore/8.0.0": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Mvc.Core": "1.0.1",
-          "Microsoft.AspNetCore.StaticFiles": "1.0.0",
-          "Microsoft.Extensions.FileProviders.Embedded": "1.0.0",
-          "NSwag.Annotations": "8.0.6186.17340",
-          "NSwag.CodeGeneration": "8.0.6186.17339",
-          "System.IO.FileSystem": "4.3.0",
-          "System.Xml.XPath.XDocument": "4.0.1"
-        },
-        "runtime": {
-          "lib/netstandard1.6/NSwag.AspNetCore.dll": {}
-        },
-        "compile": {
-          "lib/netstandard1.6/NSwag.AspNetCore.dll": {}
-        }
-      },
-      "NSwag.CodeGeneration/8.0.6186.17339": {
-        "dependencies": {
-          "NJsonSchema.CodeGeneration": "6.3.6185.19861",
-          "NSwag.Core": "8.0.6186.17339"
-        },
-        "runtime": {
-          "lib/netstandard1.0/NSwag.CodeGeneration.dll": {}
-        },
-        "compile": {
-          "lib/netstandard1.0/NSwag.CodeGeneration.dll": {}
-        }
-      },
-      "NSwag.Core/8.0.6186.17339": {
-        "dependencies": {
-          "NJsonSchema": "6.3.6185.19861"
-        },
-        "runtime": {
-          "lib/netstandard1.0/NSwag.Core.dll": {}
-        },
-        "compile": {
-          "lib/netstandard1.0/NSwag.Core.dll": {}
-        }
-      },
       "NuGet.Common/3.5.0-beta2-1484": {
         "dependencies": {
           "NETStandard.Library": "1.6.1",
@@ -1844,6 +1770,54 @@
             "rid": "ubuntu.16.10-x64",
             "assetType": "native"
           }
+        }
+      },
+      "Swashbuckle/6.0.0-beta902": {
+        "dependencies": {
+          "Swashbuckle.Swagger": "6.0.0-beta902",
+          "Swashbuckle.SwaggerGen": "6.0.0-beta902",
+          "Swashbuckle.SwaggerUi": "6.0.0-beta902"
+        }
+      },
+      "Swashbuckle.Swagger/6.0.0-beta902": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "1.0.1",
+          "Microsoft.AspNetCore.Mvc.Formatters.Json": "1.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.6/Swashbuckle.Swagger.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.6/Swashbuckle.Swagger.dll": {}
+        }
+      },
+      "Swashbuckle.SwaggerGen/6.0.0-beta902": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.ApiExplorer": "1.0.1",
+          "Microsoft.AspNetCore.Mvc.Core": "1.0.1",
+          "Microsoft.AspNetCore.Mvc.DataAnnotations": "1.0.1",
+          "Swashbuckle.Swagger": "6.0.0-beta902",
+          "System.Xml.XPath": "4.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.6/Swashbuckle.SwaggerGen.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.6/Swashbuckle.SwaggerGen.dll": {}
+        }
+      },
+      "Swashbuckle.SwaggerUi/6.0.0-beta902": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "1.0.1",
+          "Microsoft.AspNetCore.StaticFiles": "1.0.0",
+          "Microsoft.Extensions.FileProviders.Embedded": "1.0.0",
+          "System.Xml.XPath": "4.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.6/Swashbuckle.SwaggerUi.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.6/Swashbuckle.SwaggerUi.dll": {}
         }
       },
       "System.AppContext/4.3.0": {
@@ -3690,9 +3664,6 @@
           "System.Xml.XDocument": "4.3.0",
           "System.Xml.XPath": "4.0.1"
         },
-        "compile": {
-          "ref/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
-        },
         "compileOnly": true
       }
     }
@@ -4158,36 +4129,6 @@
       "serviceable": true,
       "sha512": "sha512-U82mHQSKaIk+lpSVCbWYKNavmNH1i5xrExDEquU1i6I5pV6UMOqRnJRSlKO3cMPfcpp0RgDY+8jUXHdQ4IfXvw=="
     },
-    "NJsonSchema/6.3.6185.19861": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-v0q5HWkIks05dPjMaU/NylBDBspkackv/uPYV0Tp3mytrjrOSI6qiLwIgEA4UNyDyZulaQvPnCj3/i20wpyprg=="
-    },
-    "NJsonSchema.CodeGeneration/6.3.6185.19861": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-4qXAEOSAWt+hT0Uf8cc/k18hGmJiGev68nTkkTsIL1S+uaMUxAOIPkoXVEloz9oTLQAqy8OYtCW5ylisNG0Prg=="
-    },
-    "NSwag.Annotations/8.0.6186.17340": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-J1hcuLdaZ9IkIRANJM8UGKpTrBWXZrMtX07f0l4hwgIs+nA/RjyQuor3at1W77g3dBiRGvcFJPVgp7YMnyQMKA=="
-    },
-    "NSwag.AspNetCore/8.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-xtxxpeDc/XPgI7E1AqBB0OcliLUx8/uOTqV2uNWKDFiT3qJ7JuIcxGpzKk8RrPtpJ4jNxrta5YLoWq72OUAg3g=="
-    },
-    "NSwag.CodeGeneration/8.0.6186.17339": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-D6mTodD7EdoqgK6ncbFI8HWy2/VygmmOu/gECyr4n4lZrT1pWV9Qx4WrZuluiJmKLBtIIHgrjmfmY79nDNr0Rw=="
-    },
-    "NSwag.Core/8.0.6186.17339": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-S7iJwaiZQ/ye5zh1ETjlh3msMSp2RXlifqtTI4XhwBKr95R5ENX5KsqQ9SseCu1wZjYXaSATEDLCrvs2ana49A=="
-    },
     "NuGet.Common/3.5.0-beta2-1484": {
       "type": "package",
       "serviceable": true,
@@ -4337,6 +4278,26 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-VB5cn/7OzUfzdnC8tqAIMQciVLiq2epm2NrAm1E9OjNRyG4lVhfR61SMcLizejzQP8R8Uf/0l5qOIbUEi+RdEg=="
+    },
+    "Swashbuckle/6.0.0-beta902": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jEGtMQ6pl/q6ZGB6fVkp6F830qDDNOa6QekFjanI7brmftDTv7TAFNoAjosKGH11SFO3D1g+A2UY45bskseqFQ=="
+    },
+    "Swashbuckle.Swagger/6.0.0-beta902": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DAA0nU/XCLXjir9EPScRWjUBhTT88iS+2f9wQz5av524FhMAJOVG/N/vNvXj8QPObQdnK3ttW7k/wyota73yOQ=="
+    },
+    "Swashbuckle.SwaggerGen/6.0.0-beta902": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zSHFHSf6KJ7yNwsYAibd1z0fqLVpueeax8wVwyLSZvMiUkfrNGnX/NhXKSzVltuGm3b52k7sG05mL9nwY3YvIA=="
+    },
+    "Swashbuckle.SwaggerUi/6.0.0-beta902": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qdxsxIw55cFGbng2F10soyS/eJK4MZW/M7jjoQIxUxOdpe+hG2EmNwWXijEPMwJJ5qcpB/QOc766LHtFPx9Ucg=="
     },
     "System.AppContext/4.3.0": {
       "type": "package",

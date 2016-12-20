@@ -1770,86 +1770,6 @@
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
         }
       },
-      "NJsonSchema/6.3.6185.19861": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "9.0.1"
-        },
-        "compile": {
-          "lib/netstandard1.0/NJsonSchema.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/NJsonSchema.dll": {}
-        }
-      },
-      "NJsonSchema.CodeGeneration/6.3.6185.19861": {
-        "type": "package",
-        "dependencies": {
-          "NJsonSchema": "6.3.6185.19861",
-          "Newtonsoft.Json": "9.0.1"
-        },
-        "compile": {
-          "lib/netstandard1.0/NJsonSchema.CodeGeneration.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/NJsonSchema.CodeGeneration.dll": {}
-        }
-      },
-      "NSwag.Annotations/8.0.6186.17340": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "6.0.4"
-        },
-        "compile": {
-          "lib/netstandard1.0/NSwag.Annotations.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/NSwag.Annotations.dll": {}
-        }
-      },
-      "NSwag.AspNetCore/8.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Mvc.Core": "1.0.0",
-          "Microsoft.AspNetCore.StaticFiles": "1.0.0",
-          "Microsoft.Extensions.FileProviders.Embedded": "1.0.0",
-          "NSwag.Annotations": "8.0.6186.17340",
-          "NSwag.CodeGeneration": "8.0.6186.17339",
-          "System.IO.FileSystem": "4.0.1",
-          "System.Xml.XPath.XDocument": "4.0.1"
-        },
-        "compile": {
-          "lib/netstandard1.6/NSwag.AspNetCore.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.6/NSwag.AspNetCore.dll": {}
-        }
-      },
-      "NSwag.CodeGeneration/8.0.6186.17339": {
-        "type": "package",
-        "dependencies": {
-          "NJsonSchema.CodeGeneration": "6.3.6185.19861",
-          "NSwag.Core": "8.0.6186.17339"
-        },
-        "compile": {
-          "lib/netstandard1.0/NSwag.CodeGeneration.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/NSwag.CodeGeneration.dll": {}
-        }
-      },
-      "NSwag.Core/8.0.6186.17339": {
-        "type": "package",
-        "dependencies": {
-          "NJsonSchema": "6.3.6185.19861"
-        },
-        "compile": {
-          "lib/netstandard1.0/NSwag.Core.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/NSwag.Core.dll": {}
-        }
-      },
       "NuGet.Common/3.5.0-beta2-1484": {
         "type": "package",
         "dependencies": {
@@ -2252,6 +2172,58 @@
             "assetType": "native",
             "rid": "ubuntu.16.10-x64"
           }
+        }
+      },
+      "Swashbuckle/6.0.0-beta902": {
+        "type": "package",
+        "dependencies": {
+          "Swashbuckle.Swagger": "6.0.0-beta902",
+          "Swashbuckle.SwaggerGen": "6.0.0-beta902",
+          "Swashbuckle.SwaggerUi": "6.0.0-beta902"
+        }
+      },
+      "Swashbuckle.Swagger/6.0.0-beta902": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "1.0.0",
+          "Microsoft.AspNetCore.Mvc.Formatters.Json": "1.0.0"
+        },
+        "compile": {
+          "lib/netstandard1.6/Swashbuckle.Swagger.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/Swashbuckle.Swagger.dll": {}
+        }
+      },
+      "Swashbuckle.SwaggerGen/6.0.0-beta902": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.ApiExplorer": "1.0.0",
+          "Microsoft.AspNetCore.Mvc.Core": "1.0.0",
+          "Microsoft.AspNetCore.Mvc.DataAnnotations": "1.0.0",
+          "Swashbuckle.Swagger": "6.0.0-beta902",
+          "System.Xml.XPath": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.6/Swashbuckle.SwaggerGen.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/Swashbuckle.SwaggerGen.dll": {}
+        }
+      },
+      "Swashbuckle.SwaggerUi/6.0.0-beta902": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "1.0.0",
+          "Microsoft.AspNetCore.StaticFiles": "1.0.0",
+          "Microsoft.Extensions.FileProviders.Embedded": "1.0.0",
+          "System.Xml.XPath": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.6/Swashbuckle.SwaggerUi.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/Swashbuckle.SwaggerUi.dll": {}
         }
       },
       "System.AppContext/4.3.0": {
@@ -4200,7 +4172,7 @@
           "System.Xml.XPath": "4.0.1"
         },
         "compile": {
-          "ref/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
+          "ref/netstandard1.3/_._": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
@@ -5655,110 +5627,6 @@
         "tools/install.ps1"
       ]
     },
-    "NJsonSchema/6.3.6185.19861": {
-      "sha512": "v0q5HWkIks05dPjMaU/NylBDBspkackv/uPYV0Tp3mytrjrOSI6qiLwIgEA4UNyDyZulaQvPnCj3/i20wpyprg==",
-      "type": "package",
-      "path": "NJsonSchema/6.3.6185.19861",
-      "files": [
-        "NJsonSchema.6.3.6185.19861.nupkg.sha512",
-        "NJsonSchema.nuspec",
-        "lib/net40/NJsonSchema.dll",
-        "lib/net40/NJsonSchema.pdb",
-        "lib/net40/NJsonSchema.xml",
-        "lib/net45/NJsonSchema.dll",
-        "lib/net45/NJsonSchema.pdb",
-        "lib/net45/NJsonSchema.xml",
-        "lib/netstandard1.0/NJsonSchema.dll",
-        "lib/netstandard1.0/NJsonSchema.pdb",
-        "lib/netstandard1.0/NJsonSchema.xml",
-        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10/NJsonSchema.dll",
-        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10/NJsonSchema.pdb",
-        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10/NJsonSchema.xml",
-        "lib/portable45-net45+win8+wp8+wpa81/NJsonSchema.dll",
-        "lib/portable45-net45+win8+wp8+wpa81/NJsonSchema.xml"
-      ]
-    },
-    "NJsonSchema.CodeGeneration/6.3.6185.19861": {
-      "sha512": "4qXAEOSAWt+hT0Uf8cc/k18hGmJiGev68nTkkTsIL1S+uaMUxAOIPkoXVEloz9oTLQAqy8OYtCW5ylisNG0Prg==",
-      "type": "package",
-      "path": "NJsonSchema.CodeGeneration/6.3.6185.19861",
-      "files": [
-        "NJsonSchema.CodeGeneration.6.3.6185.19861.nupkg.sha512",
-        "NJsonSchema.CodeGeneration.nuspec",
-        "lib/netstandard1.0/NJsonSchema.CodeGeneration.dll",
-        "lib/netstandard1.0/NJsonSchema.CodeGeneration.pdb",
-        "lib/netstandard1.0/NJsonSchema.CodeGeneration.xml",
-        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10/NJsonSchema.CodeGeneration.dll",
-        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10/NJsonSchema.CodeGeneration.pdb",
-        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10/NJsonSchema.CodeGeneration.xml",
-        "lib/portable45-net45+win8+wp8+wpa81/NJsonSchema.CodeGeneration.dll",
-        "lib/portable45-net45+win8+wp8+wpa81/NJsonSchema.CodeGeneration.xml"
-      ]
-    },
-    "NSwag.Annotations/8.0.6186.17340": {
-      "sha512": "J1hcuLdaZ9IkIRANJM8UGKpTrBWXZrMtX07f0l4hwgIs+nA/RjyQuor3at1W77g3dBiRGvcFJPVgp7YMnyQMKA==",
-      "type": "package",
-      "path": "NSwag.Annotations/8.0.6186.17340",
-      "files": [
-        "NSwag.Annotations.8.0.6186.17340.nupkg.sha512",
-        "NSwag.Annotations.nuspec",
-        "lib/netstandard1.0/NSwag.Annotations.dll",
-        "lib/netstandard1.0/NSwag.Annotations.pdb",
-        "lib/netstandard1.0/NSwag.Annotations.xml",
-        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10/NSwag.Annotations.dll",
-        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10/NSwag.Annotations.pdb",
-        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10/NSwag.Annotations.xml",
-        "lib/portable45-net45+win8+wp8+wpa81/NSwag.Annotations.dll",
-        "lib/portable45-net45+win8+wp8+wpa81/NSwag.Annotations.xml"
-      ]
-    },
-    "NSwag.AspNetCore/8.0.0": {
-      "sha512": "xtxxpeDc/XPgI7E1AqBB0OcliLUx8/uOTqV2uNWKDFiT3qJ7JuIcxGpzKk8RrPtpJ4jNxrta5YLoWq72OUAg3g==",
-      "type": "package",
-      "path": "NSwag.AspNetCore/8.0.0",
-      "files": [
-        "NSwag.AspNetCore.8.0.0.nupkg.sha512",
-        "NSwag.AspNetCore.nuspec",
-        "lib/net451/NSwag.AspNetCore.dll",
-        "lib/net451/NSwag.AspNetCore.xml",
-        "lib/netstandard1.6/NSwag.AspNetCore.dll",
-        "lib/netstandard1.6/NSwag.AspNetCore.xml"
-      ]
-    },
-    "NSwag.CodeGeneration/8.0.6186.17339": {
-      "sha512": "D6mTodD7EdoqgK6ncbFI8HWy2/VygmmOu/gECyr4n4lZrT1pWV9Qx4WrZuluiJmKLBtIIHgrjmfmY79nDNr0Rw==",
-      "type": "package",
-      "path": "NSwag.CodeGeneration/8.0.6186.17339",
-      "files": [
-        "NSwag.CodeGeneration.8.0.6186.17339.nupkg.sha512",
-        "NSwag.CodeGeneration.nuspec",
-        "lib/netstandard1.0/NSwag.CodeGeneration.dll",
-        "lib/netstandard1.0/NSwag.CodeGeneration.pdb",
-        "lib/netstandard1.0/NSwag.CodeGeneration.xml",
-        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10/NSwag.CodeGeneration.dll",
-        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10/NSwag.CodeGeneration.pdb",
-        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10/NSwag.CodeGeneration.xml",
-        "lib/portable45-net45+win8+wp8+wpa81/NSwag.CodeGeneration.dll",
-        "lib/portable45-net45+win8+wp8+wpa81/NSwag.CodeGeneration.xml"
-      ]
-    },
-    "NSwag.Core/8.0.6186.17339": {
-      "sha512": "S7iJwaiZQ/ye5zh1ETjlh3msMSp2RXlifqtTI4XhwBKr95R5ENX5KsqQ9SseCu1wZjYXaSATEDLCrvs2ana49A==",
-      "type": "package",
-      "path": "NSwag.Core/8.0.6186.17339",
-      "files": [
-        "NSwag.Core.8.0.6186.17339.nupkg.sha512",
-        "NSwag.Core.nuspec",
-        "lib/netstandard1.0/NSwag.Core.dll",
-        "lib/netstandard1.0/NSwag.Core.pdb",
-        "lib/netstandard1.0/NSwag.Core.xml",
-        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10/NSwag.Core.dll",
-        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10/NSwag.Core.pdb",
-        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10/NSwag.Core.xml",
-        "lib/portable45-net45+win8+wp8+wpa81/NSwag.Core.dll",
-        "lib/portable45-net45+win8+wp8+wpa81/NSwag.Core.xml"
-      ]
-    },
     "NuGet.Common/3.5.0-beta2-1484": {
       "sha512": "rLBmcZOPVF7Mne/LumDNACZZyI5B67hjylt+Z/WSEUQ/IXE9nLv8IVL0+T9xljIaSSQCjO8cOtmJ6ztqrsQKcQ==",
       "type": "package",
@@ -6157,6 +6025,48 @@
         "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg.sha512",
         "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl.nuspec",
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
+      ]
+    },
+    "Swashbuckle/6.0.0-beta902": {
+      "sha512": "jEGtMQ6pl/q6ZGB6fVkp6F830qDDNOa6QekFjanI7brmftDTv7TAFNoAjosKGH11SFO3D1g+A2UY45bskseqFQ==",
+      "type": "package",
+      "path": "Swashbuckle/6.0.0-beta902",
+      "files": [
+        "Swashbuckle.6.0.0-beta902.nupkg.sha512",
+        "Swashbuckle.nuspec"
+      ]
+    },
+    "Swashbuckle.Swagger/6.0.0-beta902": {
+      "sha512": "DAA0nU/XCLXjir9EPScRWjUBhTT88iS+2f9wQz5av524FhMAJOVG/N/vNvXj8QPObQdnK3ttW7k/wyota73yOQ==",
+      "type": "package",
+      "path": "Swashbuckle.Swagger/6.0.0-beta902",
+      "files": [
+        "Swashbuckle.Swagger.6.0.0-beta902.nupkg.sha512",
+        "Swashbuckle.Swagger.nuspec",
+        "lib/net451/Swashbuckle.Swagger.dll",
+        "lib/netstandard1.6/Swashbuckle.Swagger.dll"
+      ]
+    },
+    "Swashbuckle.SwaggerGen/6.0.0-beta902": {
+      "sha512": "zSHFHSf6KJ7yNwsYAibd1z0fqLVpueeax8wVwyLSZvMiUkfrNGnX/NhXKSzVltuGm3b52k7sG05mL9nwY3YvIA==",
+      "type": "package",
+      "path": "Swashbuckle.SwaggerGen/6.0.0-beta902",
+      "files": [
+        "Swashbuckle.SwaggerGen.6.0.0-beta902.nupkg.sha512",
+        "Swashbuckle.SwaggerGen.nuspec",
+        "lib/net451/Swashbuckle.SwaggerGen.dll",
+        "lib/netstandard1.6/Swashbuckle.SwaggerGen.dll"
+      ]
+    },
+    "Swashbuckle.SwaggerUi/6.0.0-beta902": {
+      "sha512": "qdxsxIw55cFGbng2F10soyS/eJK4MZW/M7jjoQIxUxOdpe+hG2EmNwWXijEPMwJJ5qcpB/QOc766LHtFPx9Ucg==",
+      "type": "package",
+      "path": "Swashbuckle.SwaggerUi/6.0.0-beta902",
+      "files": [
+        "Swashbuckle.SwaggerUi.6.0.0-beta902.nupkg.sha512",
+        "Swashbuckle.SwaggerUi.nuspec",
+        "lib/net451/Swashbuckle.SwaggerUi.dll",
+        "lib/netstandard1.6/Swashbuckle.SwaggerUi.dll"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -10813,7 +10723,7 @@
       "Microsoft.NETCore.App >= 1.0.1",
       "Microsoft.VisualStudio.Web.BrowserLink.Loader >= 14.0.0",
       "MongoDB.Driver >= 2.4.0",
-      "NSwag.AspNetCore >= 8.0.0"
+      "Swashbuckle >= 6.0.0-beta902"
     ],
     ".NETCoreApp,Version=v1.0": []
   },

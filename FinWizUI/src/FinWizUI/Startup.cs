@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using NSwag.AspNetCore;
 using Microsoft.AspNetCore.Identity;
 using AspNetCore.Identity.MongoDB;
 using Microsoft.Extensions.Options;
@@ -18,6 +15,7 @@ using System.Security.Claims;
 using FinWizUI.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using System.Reflection;
 
 namespace FinWizUI
 {
@@ -99,6 +97,10 @@ namespace FinWizUI
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
+
+            //Adding Swagger Gen
+            // Inject an implementation of ISwaggerProvider with defaulted settings applied
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -132,14 +134,11 @@ namespace FinWizUI
             });
 
             
+            // Enable middleware to serve generated Swagger as a JSON endpoint
+            app.UseSwagger();
 
-            //app.UseSwaggerUi(typeof(Startup).Assembly, new SwaggerUiOwinSettings());
-
-            //var config = new HttpConfiguration();
-            //app.UseWebApi(config);
-
-            //config.MapHttpAttributeRoutes();
-            //config.EnsureInitialized();
+            // Enable middleware to serve swagger-ui assets (HTML, JS, CSS etc.)
+            app.UseSwaggerUi();
         }
 
 
